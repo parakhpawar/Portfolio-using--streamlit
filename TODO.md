@@ -1,0 +1,4 @@
+- [x] Add CSS media queries for responsive design (stack columns on small screens, adjust font sizes, image sizes)
+- [x] Change fixed image widths to use_container_width=True for responsiveness
+- [ ] Adjust column ratios if necessary for better layout
+- [ ] Test the app on different screen sizes

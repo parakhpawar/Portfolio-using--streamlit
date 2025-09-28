@@ -1,4 +1,4 @@
-
+  
 import requests
 import streamlit as st
 from PIL import Image
@@ -66,6 +66,60 @@ a:hover {
     padding: 20px;
     border-radius: 12px;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stColumn {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+    .title-text {
+        font-size: 30px !important;
+    }
+    .subtitle-text {
+        font-size: 18px !important;
+    }
+    .skills-title {
+        font-size: 20px !important;
+    }
+    .skills-logos img {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    .linkedin-btn {
+        font-size: 14px !important;
+        padding: 6px 12px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-text {
+        font-size: 24px !important;
+    }
+    .subtitle-text {
+        font-size: 16px !important;
+    }
+    .skills-title {
+        font-size: 18px !important;
+    }
+    .skills-logos img {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    .linkedin-btn {
+        font-size: 12px !important;
+        padding: 5px 10px !important;
+    }
+    h2 {
+        font-size: 1.5em !important;
+    }
+    h3 {
+        font-size: 1.2em !important;
+    }
+    h4 {
+        font-size: 1.1em !important;
+    }
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -94,7 +148,7 @@ img_im6= Image.open("webpage/Images/img_six.jpg")
 img_im7= Image.open("webpage/Images/profile.jpg")
 # --- Header Section ---
 with st.container():
-    col1, col2 = st.columns([3, 1])  # wider text column, smaller image column
+    col1, col2 = st.columns([2, 1])  # wider text column, smaller image column
 
     with col1:
         st.markdown(
@@ -222,7 +276,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 with col2:
-    st.image(img_im7, caption="That's me!", width=220)
+    st.image(img_im7, caption="That's me!", use_container_width=True)
 
 
 # --- WHAT I DO ---
@@ -456,6 +510,8 @@ with st.container():
         """
         <div style="text-align: center;">
             <h2>🎭 Things that fuel my life</h2>
+             </span>
+              <h1> loading......</h1>
         </div>
         """,
         unsafe_allow_html=True
@@ -464,24 +520,24 @@ with st.container():
     
     
 
-    # Image display in a creative grid
-    img_im1 = "webpage/Images/img_one.webp"
-    img_im2 = "webpage/Images/img_two.jpeg"
-    img_im3 = "webpage/Images/img_three.jpeg"
-    img_im4 = "webpage/Images/img_four.jpg"
-    img_im5 = "webpage/Images/img_five.jpg"
-    img_im6 = "webpage/Images/img_six.jpg"
+    # # Image display in a creative grid
+    # img_im1 = "webpage/Images/img_one.webp"
+    # img_im2 = "webpage/Images/img_two.jpeg"
+    # img_im3 = "webpage/Images/img_three.jpeg"
+    # img_im4 = "webpage/Images/img_four.jpg"
+    # img_im5 = "webpage/Images/img_five.jpg"
+    # img_im6 = "webpage/Images/img_six.jpg"
 
-    col1, col2, col3 = st.columns([1, 1, 1])
+    # col1, col2, col3 = st.columns([1, 1, 1])
 
-    with col1:
-        st.image(img_im1, caption="Event 1", use_container_width=True)
-        st.image(img_im4, caption="Event 4", use_container_width=True)
+    # with col1:
+    #     st.image(img_im1, caption="Event 1", use_container_width=True)
+    #     st.image(img_im4, caption="Event 4", use_container_width=True)
 
-    with col2:
-        st.image(img_im2, caption="Event 2", use_container_width=True)
-        st.image(img_im5, caption="Event 5", use_container_width=True)
+    # with col2:
+    #     st.image(img_im2, caption="Event 2", use_container_width=True)
+    #     st.image(img_im5, caption="Event 5", use_container_width=True)
 
-    with col3:
-        st.image(img_im3, caption="Event 3", use_container_width=True)
-        st.image(img_im6, caption="Event 6", use_container_width=True)
+    # with col3:
+    #     st.image(img_im3, caption="Event 3", use_container_width=True)
+    #     st.image(img_im6, caption="Event 6", use_container_width=True)
